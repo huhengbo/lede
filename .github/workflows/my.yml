@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt云编译03
+name: OpenWrt云编译04
 
 on:
   schedule:
@@ -45,8 +45,7 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone https://github.com/Ameykyl/luci-app-koolproxyR
-          git clone https://github.com/pymumu/luci-app-smartdns.git
+          git clone https://github.com/brokeld/luci-app-koolproxyR.git
           git clone https://github.com/frainzy1477/luci-app-clash.git
           git clone https://github.com/maxlicheng/luci-app-unblockmusic.git
           git clone https://github.com/jerrykuku/luci-theme-argon.git
@@ -151,7 +150,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-wol=y
-          CONFIG_PACKAGE_luci-app-trojan=y
           EOF	
           # LuCI主题:	
           cat >> .config <<EOF
